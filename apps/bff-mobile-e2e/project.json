@@ -1,0 +1,23 @@
+{
+  "name": "bff-mobile-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "implicitDependencies": [
+    "bff-mobile"
+  ],
+  "targets": {
+    "e2e": {
+      "command": "jest --passWithNoTests",
+      "outputs": [
+        "{workspaceRoot}/coverage/{e2eProjectRoot}"
+      ],
+      "dependsOn": [
+        "bff-mobile:build",
+        "bff-mobile:serve"
+      ],
+      "options": {
+        "cwd": "apps/bff-mobile-e2e"
+      }
+    }
+  }
+}

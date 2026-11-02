@@ -1,0 +1,23 @@
+{
+  "name": "bff-web-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "implicitDependencies": [
+    "bff-web"
+  ],
+  "targets": {
+    "e2e": {
+      "command": "jest --passWithNoTests",
+      "outputs": [
+        "{workspaceRoot}/coverage/{e2eProjectRoot}"
+      ],
+      "dependsOn": [
+        "bff-web:build",
+        "bff-web:serve"
+      ],
+      "options": {
+        "cwd": "apps/bff-web-e2e"
+      }
+    }
+  }
+}
