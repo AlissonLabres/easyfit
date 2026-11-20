@@ -33,4 +33,4 @@ Essa organização busca separar as responsabilidades de cada plataforma, promov
 | Frontend Aluno     | BFF Aluno             | Encaminhamento das requisições da plataforma. |
 | BFF Professor      | Camada de Domínio     | Solicitação de operações e regras de negócio. |
 | BFF Aluno          | Camada de Domínio     | Solicitação de operações e regras de negócio. |
-| Camada de Domínio  | Persistência de Dados | Consulta e armazenamento das informações.     |a
+| Camada de Domínio  | Persistência de Dados | Consulta e armazenamento das informações.     |

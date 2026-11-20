@@ -29,10 +29,9 @@ O PostgreSQL será executado em um container Docker, permitindo seu gerenciament
 - Facilidade para atualizar e recriar o ambiente do banco de dados.
 - Separação do ciclo de execução do banco em relação às aplicações.
 - Necessidade de configurar volumes persistentes para preservar os dados durante a recriação do container.
-- Necessidade de estabelecer uma estratégia de backup e recuperação.
+- Estratégia de backup e recuperação formalizada no ADR-008.
 
-### Pontos pendentes
-- Backup diário automatizado.
-- Procedimento de restauração dos dados.
-- Volume persistente para os dados do PostgreSQL.
-- Local de armazenamento dos backups, preferencialmente fora do próprio Droplet.
+### Ponto pendente
+- Configuração e documentação de um volume persistente para os dados do PostgreSQL, garantindo sua preservação durante a recriação do container.
+
+A estratégia de backup externo e o procedimento de restauração estão definidos no [ADR-008](./adr-008-estrategia-backup-banco-dados.md).

@@ -4,20 +4,19 @@
 
 A plataforma do aluno deve permitir o acesso aos treinos disponibilizados pelo professor e o acompanhamento de sua execução.
 
-| ID        | Requisito                           | Prioridade | Descrição                                                                                                                                      |
-| --------- | ----------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| RF-ALU-01 | Acesso à plataforma                 | Alta       | O aluno deve conseguir acessar a plataforma utilizando seu e-mail cadastrado e o código de acesso fornecido pelo professor.                    |
-| RF-ALU-02 | Visualização dos treinos            | Alta       | O aluno deve visualizar a lista de treinos disponibilizados pelo professor, identificando aqueles disponíveis para execução.                   |
-| RF-ALU-03 | Visualização dos detalhes do treino | Alta       | O aluno deve consultar os exercícios de cada treino, incluindo séries, repetições, cargas, intervalos e orientações definidas pelo professor.  |
-| RF-ALU-04 | Seleção de treino                   | Alta       | O aluno deve conseguir selecionar qualquer treino disponibilizado para consultar seus detalhes ou iniciar sua execução.                        |
-| RF-ALU-05 | Iniciar treino                      | Alta       | O aluno deve conseguir iniciar a execução de um treino, registrando o início de sua sessão.                                                    |
-| RF-ALU-06 | Acompanhamento dos exercícios       | Alta       | O aluno deve acompanhar os exercícios do treino durante sua execução, identificando as atividades realizadas e pendentes.                      |
-| RF-ALU-07 | Registro de séries concluídas       | Alta       | O aluno deve marcar individualmente as séries realizadas, permitindo acompanhar seu progresso durante o treino.                                |
+| ID        | Requisito                           | Prioridade | Descrição |
+|-----------|-------------------------------------|------------|-----------|
+| RF-ALU-01 | Acesso à plataforma                 | Alta       | O aluno deve conseguir acessar a plataforma utilizando seu e-mail cadastrado e o código de acesso fornecido pelo professor. |
+| RF-ALU-02 | Visualização dos treinos            | Alta       | O aluno deve visualizar a lista de treinos disponibilizados pelo professor, identificando aqueles disponíveis para execução. |
+| RF-ALU-03 | Visualização dos detalhes do treino | Alta       | O aluno deve consultar os exercícios de cada treino, incluindo séries, repetições, cargas, intervalos e orientações definidas pelo professor. |
+| RF-ALU-04 | Seleção de treino                   | Alta       | O aluno deve conseguir selecionar qualquer treino disponibilizado para consultar seus detalhes ou iniciar sua execução. |
+| RF-ALU-05 | Iniciar treino                      | Alta       | O aluno deve conseguir iniciar a execução de um treino, registrando localmente o horário de início da sessão. Não será permitido iniciar outro treino enquanto existir uma sessão em andamento no dispositivo. |
+| RF-ALU-06 | Acompanhamento dos exercícios       | Alta       | O aluno deve acompanhar os exercícios do treino durante sua execução, identificando as atividades realizadas e pendentes. |
+| RF-ALU-07 | Registro de séries concluídas       | Alta       | O aluno deve marcar individualmente as séries realizadas, mantendo o progresso da execução armazenado localmente no dispositivo. |
 | RF-ALU-08 | Controle de descanso                | Alta       | O aluno deve utilizar um temporizador para controlar os intervalos de descanso entre as séries, considerando o tempo prescrito pelo professor. |
-| RF-ALU-09 | Finalização do treino               | Alta       | O aluno deve conseguir finalizar uma sessão de treino, registrando sua conclusão.                                                              |
-| RF-ALU-10 | Histórico de treinos                | Média      | O aluno deve consultar o histórico de sessões realizadas, identificando os treinos executados e suas respectivas datas.                        |
-| RF-ALU-11 | Retomada de treino                  | Média      | O aluno deve conseguir retomar uma sessão iniciada anteriormente, preservando o progresso registrado, caso não tenha sido finalizada.          |
-
+| RF-ALU-09 | Finalização do treino               | Alta       | O aluno deve conseguir finalizar uma sessão de treino, enviando ao servidor o identificador do treino e os horários de início e término. Após a tentativa de envio, os dados da sessão devem ser removidos do armazenamento local, independentemente da confirmação do servidor. |
+| RF-ALU-10 | Histórico de treinos                | Média      | O aluno deve consultar o histórico de sessões registradas no servidor, identificando os treinos executados, suas datas e horários de início e término. |
+| RF-ALU-11 | Retomada de treino                  | Média      | Ao acessar a tela inicial, o aluno deve conseguir identificar e retomar uma sessão de treino em andamento, preservando o progresso registrado localmente, sem iniciar automaticamente sua execução. Enquanto existir uma sessão em andamento, não será permitido iniciar outro treino. |
 
 # Requisitos Funcionais - Professor
 
@@ -36,4 +35,4 @@ A plataforma do professor deve permitir o gerenciamento dos alunos e a criação
 | RF-PRO-07 | Organização dos treinos          | Alta       | O professor deve organizar os exercícios na sequência desejada, definindo a estrutura de execução do treino.                              |
 | RF-PRO-08 | Edição de treinos                | Alta       | O professor deve conseguir alterar treinos previamente cadastrados, atualizando exercícios, séries, repetições, cargas e orientações.     |
 | RF-PRO-09 | Disponibilização de treinos      | Alta       | O professor deve disponibilizar os treinos aos alunos associados, permitindo sua consulta na plataforma do aluno.                         |
-| RF-PRO-10 | Gerenciamento da disponibilidade | Média      | O professor deve conseguir alterar a disponibilidade de um treino, permitindo controlar quais prescrições permanecem acessíveis ao aluno. |
+
